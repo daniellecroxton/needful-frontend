@@ -1,6 +1,12 @@
 import React from 'react';
-
+import {connect} from 'react-redux'
+import {fetchUsers} from './actions/fetchUsers'
 class App extends React.Component {
+
+  componentDidMount() {
+    this.props.fetchUsers
+  }
+
 
   render() {
 
@@ -12,4 +18,14 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    users: state.users
+  }
+}
+
+// const mapDispatchToProps = (state) => {
+  
+// }
+
+export default connect(mapStateToProps, {fetchUsers})(App);
