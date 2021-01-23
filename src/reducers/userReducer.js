@@ -1,5 +1,10 @@
 export default function userReducer(state = {users: []}, action) {
 
-    return state
-
+    switch (action.type) {
+        case 'FETCH_USERS':
+            return {users: action.payload}
+    
+        default:
+            return state
+    }
 }

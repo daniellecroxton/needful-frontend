@@ -4,7 +4,9 @@ const UserList = (props) => {
 
     return (
         <div>
-            User List
+            <ul>
+                {props.users.map(user => <li key={user.id}>{user.name}</li>)}
+            </ul>
         </div>
     )
 
