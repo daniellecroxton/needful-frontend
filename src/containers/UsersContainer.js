@@ -1,4 +1,7 @@
 import React from 'react';
+import UserList from '../components/UserList'
+import UserInput from '../components/UserInput'
+
 
 class UsersContainer extends React.Component {
 
@@ -6,6 +9,8 @@ class UsersContainer extends React.Component {
         return (
             <div>
                 Users Container
+                <UserList/>
+                <UserInput/>
             </div>
         )
 

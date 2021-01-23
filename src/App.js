@@ -6,7 +6,7 @@ import ItemsContainer from './containers/ItemsContainer'
 class App extends React.Component {
 
   componentDidMount() {
-    this.props.fetchUsers
+    return this.props.fetchUsers
   }
 
 
