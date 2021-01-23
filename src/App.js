@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import {fetchUsers} from './actions/fetchUsers'
+import UsersContainer from './containers/UsersContainer'
+import ItemsContainer from './containers/ItemsContainer'
 class App extends React.Component {
 
   componentDidMount() {
@@ -13,6 +15,8 @@ class App extends React.Component {
     return (
       <div className="App">
           <p>Welcome to needful. A work in progress.</p>
+          <UsersContainer />
+          <ItemsContainer />
       </div>
     );
   }
