@@ -1,15 +1,16 @@
 import React from 'react'
 import UserShow from './UserShow'
+import {Route, Link} from 'react-router-dom'
 
 const UserList = (props) => {
 
     return (
-        <div>
-            <ul>
+            <div>
                 {props.users.map(user => 
-                    <li key={user.id}><UserShow user={user}/></li>)}
-            </ul>
-        </div>
+                    <li key={user.id}>
+                        <Link to={`/users/${user.id}`}>{user.name}</Link>
+                    </li>)}
+            </div>
     )
 
 
