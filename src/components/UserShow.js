@@ -11,7 +11,7 @@ const UserShow = (props) => {
     return (
         <div>
             <h2>
-                User Page
+                User Page<br/>
                 {user ? user.name : null}
             </h2>
             <ItemsContainer user={user}/>
