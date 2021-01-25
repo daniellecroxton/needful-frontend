@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import UserList from '../components/UserList'
 import UserInput from '../components/UserInput'
 import {fetchUsers} from '../actions/fetchUsers'
-
+import {Route} from 'react-router-dom'
 class UsersContainer extends React.Component {
 
     componentDidMount() {
@@ -14,8 +14,10 @@ class UsersContainer extends React.Component {
         return (
             <div>
                 Users Container
-                <UserList users={this.props.users}/>
-                <UserInput/>
+                <Route exact path='/users' render={() => <UserList users={this.props.users}/>}/>
+                {/* <UserList users={this.props.users}/> */}
+                <Route path='/users/new' component={UserInput}/>
+                {/* <UserInput/> */}
             </div>
         )
 
