@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import { createItem } from '../actions/createItem'
 class ItemInput extends React.Component {
 
 state = {
@@ -15,7 +16,13 @@ handleChange = (event) => {
 }
 
 handleSubmit = (event) => {
-    
+    event.preventDefault()
+    this.props.createItem(this.state, this.props.user.id)
+    this.setState({
+        name: '',
+        description: '',
+        price: ''
+    })
 }
 
     render() {
@@ -37,4 +44,4 @@ handleSubmit = (event) => {
     }
 }
 
-export default connect(null)(ItemInput)
+export default connect(null, {createItem})(ItemInput)
