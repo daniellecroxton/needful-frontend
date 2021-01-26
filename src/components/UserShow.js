@@ -6,7 +6,8 @@ const UserShow = (props) => {
     
     console.log(props.users)
 
-    let user = props.users[props.match.params.id -1]
+    // let user = props.users[props.match.params.id -1]
+    let user = props.users.filter(user => user.id == props.match.params.id)[0]
 
     return (
         <div>
