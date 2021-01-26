@@ -6,30 +6,26 @@ import ItemsContainer from './containers/ItemsContainer'
 class App extends React.Component {
 
   componentDidMount() {
-    return this.props.fetchUsers
-  }
-
+    this.props.fetchUsers()
+}
 
   render() {
 
     return (
       <div className="App">
-          <p>Welcome to needful. A work in progress.</p>
-          <UsersContainer />
+          <h1>Needful.</h1>
+          <UsersContainer users={this.props.users}/>
           <ItemsContainer />
       </div>
     );
   }
 }
 
-const mapStateToProps = (state) => {
+
+const mapStateToProps = state => {
   return {
-    users: state.users
+      users: state.users
   }
 }
 
-// const mapDispatchToProps = (state) => {
-  
-// }
-
-export default connect(mapStateToProps, {fetchUsers})(App);
+export default connect(mapStateToProps, {fetchUsers})(App)

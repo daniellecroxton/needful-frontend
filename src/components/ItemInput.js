@@ -32,11 +32,11 @@ handleSubmit = (event) => {
                 ItemInput
                 <form onSubmit={this.handleSubmit}>
                     <label>Item Name:</label>
-                    <input type='text' name="name" value={this.state.name} onChange={this.handleChange}></input>
+                    <input type='text' name="name" value={this.state.name} onChange={this.handleChange}></input><br/>
                     <label>Item Description:</label>
-                    <input type='text' name="description" value={this.state.description} onChange={this.handleChange}></input>
-                    <label>Item Price:</label>
-                    <input type='text' name="price" value={this.state.price} onChange={this.handleChange}></input>
+                    <input type='text' name="description" value={this.state.description} onChange={this.handleChange}></input><br/>
+                    <label>Item Price: $</label>
+                    <input type='text' name="price" value={this.state.price} onChange={this.handleChange}></input><br/>
                     <input type='submit'></input>
                 </form>
             </div>
