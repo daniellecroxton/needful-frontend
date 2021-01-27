@@ -5,6 +5,7 @@ import UsersContainer from './containers/UsersContainer'
 import ItemsContainer from './containers/ItemsContainer'
 import UserItemsContainer from './containers/UserItemsContainer'
 import SideNav from './components/SideNav'
+import './css/App.css'
 class App extends React.Component {
 
   componentDidMount() {
@@ -15,13 +16,17 @@ class App extends React.Component {
 
     return (
       <div className="App">
-          <h1>Needful.</h1>
-          <SideNav/>
-          {this.props.loading ? <h2>LOADING...</h2> : null}
-          <UsersContainer users={this.props.users}/><br/>
-          {/* <ItemsContainer users={this.props.users}/> */}
+        <div class="sidenavtop">
+            <h1>Needful.</h1>
+            <SideNav/>
+            </div>
+            {this.props.loading ? <h2>LOADING...</h2> : null}
+            <UsersContainer users={this.props.users}/><br/>
+            {/* <ItemsContainer users={this.props.users}/> */}
+          <div class="main">
           <ItemsContainer/>
           <UserItemsContainer/>
+          </div>
       </div>
     );
   }
