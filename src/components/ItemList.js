@@ -13,7 +13,7 @@ const ItemList = (props) => {
     // useEffect(() =>{fetchItems()}, [])
 
     const dispatch = useDispatch();
-    let items = useEffect(() => {
+    useEffect(() => {
       const loadItems = async () => {
         await dispatch(fetchItems());
       };

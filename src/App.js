@@ -18,7 +18,8 @@ class App extends React.Component {
           <SideNav/>
           {this.props.loading ? <h2>LOADING...</h2> : null}
           <UsersContainer users={this.props.users}/><br/>
-          <ItemsContainer users={this.props.users}/>
+          {/* <ItemsContainer users={this.props.users}/> */}
+          <ItemsContainer/>
       </div>
     );
   }

@@ -30,6 +30,9 @@ handleSubmit = (event) => {
 
         return (
             <div>
+                <h2>
+                    {this.props.user ? this.props.user.name : null}
+                </h2>
                 <h4>Add a new item</h4>
                 <form onSubmit={this.handleSubmit}>
                     <label>Item Name:</label>

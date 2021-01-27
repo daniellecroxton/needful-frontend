@@ -3,8 +3,7 @@ import React from 'react'
 const UserItemList = (props) => {
 
 
-    let user = props.users.users.filter(user => user.id == props.match.params.id)[0]
-
+    let user = this.props.user
 
     return (
         <div>
