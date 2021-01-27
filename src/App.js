@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {fetchUsers} from './actions/fetchUsers'
 import UsersContainer from './containers/UsersContainer'
 import ItemsContainer from './containers/ItemsContainer'
+import UserItemsContainer from './containers/UserItemsContainer'
 import SideNav from './components/SideNav'
 class App extends React.Component {
 
@@ -20,6 +21,7 @@ class App extends React.Component {
           <UsersContainer users={this.props.users}/><br/>
           {/* <ItemsContainer users={this.props.users}/> */}
           <ItemsContainer/>
+          <UserItemsContainer/>
       </div>
     );
   }
