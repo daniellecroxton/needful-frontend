@@ -17,12 +17,13 @@ class ItemsContainer extends React.Component {
         return (
             <div>
                 {this.props.loading ? <h2>LOADING...</h2> : null}
+                {console.log(this.props)}
 
                 <Switch>
                     <Route path='/users/:id/items/new' render={(routerProps) => <ItemInput {...routerProps} user={this.props.user && this.props.user}/>}/>
                     <Route path='/users/:id/items/' render={(routerProps) => <UserItemList {...routerProps} users={this.props.users && this.props.users}/>}/>
-                    <Route path='/users/:id/items/:id' render={(routerProps) => <ItemShow {...routerProps} user={this.props.user && this.props.user}/>}/>
-                    <Route path='/items/' component={ItemList} items={this.props.items && this.props.items}/>
+                    <Route path='/users/:id/items/:id' render={(routerProps) => <ItemShow {...routerProps} items={this.props.items && this.props.items}/>}/>
+                    {/* <Route path='/items/' component={ItemList} items={this.props.items && this.props.items}/> */}
                 </Switch>
             </div>
         )

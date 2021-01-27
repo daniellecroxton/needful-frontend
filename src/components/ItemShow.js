@@ -4,6 +4,7 @@ import React from 'react'
 
 const ItemShow = (props) => {
     
+    console.log(props)
 
     let item = props.items.items.filter(item => item.id == props.match.params.id)[0]
 
