@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 
 const UserShow = (props) => {
     
-    // console.log(props)
+    console.log(props)
     
     // let user = props.users[props.match.params.id -1]
     let user = props.users.users.filter(user => user.id === props.match.params.id)[0]

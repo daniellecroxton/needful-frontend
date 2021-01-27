@@ -1,7 +1,7 @@
 
 export const createItem = (item, userId) => {
     return (dispatch) => {
-        fetch('http://localhost:3000/api/v1/users/${userId}/items', {
+        fetch(`http://localhost:3000/api/v1/users/${userId}/items`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'

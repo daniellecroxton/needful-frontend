@@ -1,6 +1,5 @@
 import React from 'react'
-import ItemShow from './ItemShow'
-import {Route, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 const ItemList = (props) => {
 
@@ -11,7 +10,7 @@ const ItemList = (props) => {
             <div>
                 {props.items.items.map(item => 
                     <li key={item.id}>
-                        <Link to={`items/${item.id}`}>{item.name} - {item.price}</Link>
+                        <Link to={`/users/${item.user_id}/items/${item.id}`}>{item.name} - {item.price}</Link>
                     </li>)}
             </div>
     )
