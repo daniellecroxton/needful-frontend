@@ -12,14 +12,28 @@ class ItemsContainer extends React.Component {
         this.props.fetchItems()
     }
 
+
+    // <UserList users={this.props.users && this.props.users}/>
+    // <Route path='/users/:id' render={(routerProps) => <UserShow {...routerProps} users={this.props.users && this.props.users}/>}/>
+    // <Route path='/users' render={(routerProps) => <UserList {...routerProps} users={this.props.users && this.props.users}/>}/>
+
+
+
     render() {
         return (
             <div>
                 Items Container
-                <ItemInput user={this.props.user}/>
-                <UserItemList items={this.props.user && this.props.user.items}/>
-                <ItemList items={this.props.items && this.props.items}/>
-                <Route path='/items/:id' render={(routerProps) => <ItemShow {...routerProps} items={this.props.items && this.props.items}/>}/>
+                <Switch>
+                    {/* <ItemInput user={this.props.user}/>
+                    <Route path='/users/new' component={UserInput}/> */}
+
+                    <Route path='/users/:id/items/new' render={(routerProps) => <ItemInput {...routerProps} user={this.props.user && this.props.user}/>}/>
+
+
+                    <UserItemList items={this.props.user && this.props.user.items}/>
+                    <ItemList items={this.props.items && this.props.items}/>
+                    <Route path='/items/:id' render={(routerProps) => <ItemShow {...routerProps} items={this.props.items && this.props.items}/>}/>
+                </Switch>
             </div>
         )
 

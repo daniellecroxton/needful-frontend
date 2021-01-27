@@ -10,8 +10,9 @@ class UsersContainer extends React.Component {
     render() {
         return (
             <div>
-                Users Container
+                Users:
                 <Switch>
+                    <UserList users={this.props.users && this.props.users}/>
                     <Route path='/users/new' component={UserInput}/>
                     <Route path='/users/:id' render={(routerProps) => <UserShow {...routerProps} users={this.props.users && this.props.users}/>}/>
                     <Route path='/users' render={(routerProps) => <UserList {...routerProps} users={this.props.users && this.props.users}/>}/>

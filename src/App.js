@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {fetchUsers} from './actions/fetchUsers'
 import UsersContainer from './containers/UsersContainer'
 import ItemsContainer from './containers/ItemsContainer'
+import SideNav from './components/SideNav'
 class App extends React.Component {
 
   componentDidMount() {
@@ -14,7 +15,8 @@ class App extends React.Component {
     return (
       <div className="App">
           <h1>Needful.</h1>
-          <UsersContainer users={this.props.users}/>
+          <SideNav/>
+          <UsersContainer users={this.props.users}/><br/>
           <ItemsContainer />
       </div>
     );

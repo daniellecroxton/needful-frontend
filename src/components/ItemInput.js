@@ -25,11 +25,12 @@ handleSubmit = (event) => {
     })
 }
 
+
     render() {
 
         return (
             <div>
-                ItemInput
+                <h4>Add a new item</h4>
                 <form onSubmit={this.handleSubmit}>
                     <label>Item Name:</label>
                     <input type='text' name="name" value={this.state.name} onChange={this.handleChange}></input><br/>
