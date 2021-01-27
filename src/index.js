@@ -5,12 +5,14 @@ import thunk from 'redux-thunk';
 import {Provider} from 'react-redux';
 import userReducer from './reducers/userReducer'
 import itemReducer from './reducers/itemReducer'
+import loadingReducer from './reducers/loadingReducer'
 import App from './App';
 import {BrowserRouter as Router} from 'react-router-dom'
 
 const rootReducer = combineReducers({
     users: userReducer,
-    items: itemReducer
+    items: itemReducer,
+    loading: loadingReducer
   })
 
 const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;

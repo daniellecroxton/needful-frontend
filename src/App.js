@@ -16,6 +16,7 @@ class App extends React.Component {
       <div className="App">
           <h1>Needful.</h1>
           <SideNav/>
+          {this.props.loading ? <h2>LOADING...</h2> : null}
           <UsersContainer users={this.props.users}/><br/>
           <ItemsContainer users={this.props.users}/>
       </div>
@@ -26,7 +27,8 @@ class App extends React.Component {
 
 const mapStateToProps = state => {
   return {
-      users: state.users
+      users: state.users,
+      loading: state.loading
   }
 }
 

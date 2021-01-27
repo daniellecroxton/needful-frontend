@@ -16,6 +16,8 @@ class ItemsContainer extends React.Component {
     render() {
         return (
             <div>
+                {this.props.loading ? <h2>LOADING...</h2> : null}
+
                 <Switch>
                     <Route path='/users/:id/items/new' render={(routerProps) => <ItemInput {...routerProps} user={this.props.user && this.props.user}/>}/>
                     <Route path='/users/:id/items/' render={(routerProps) => <UserItemList {...routerProps} users={this.props.users && this.props.users}/>}/>
@@ -32,7 +34,8 @@ class ItemsContainer extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        items: state.items
+        items: state.items,
+        loading: state.loading
     }
 }
 
