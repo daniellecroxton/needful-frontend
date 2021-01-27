@@ -1,9 +1,27 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
+import {fetchItems} from '../actions/fetchItems'
+import {useState, useEffect} from 'react'
+import { useSelector, useDispatch } from "react-redux";
 
 const ItemList = (props) => {
 
+    // const items = useState([]);
+
+
+    // useEffect(() =>{fetchItems()}, [])
+
+    const dispatch = useDispatch();
+    let items = useEffect(() => {
+      const loadItems = async () => {
+        await dispatch(fetchItems());
+      };
+      loadItems();
+    }, [dispatch]);
+
     console.log(props)
+    
 
     return (
     
@@ -18,4 +36,13 @@ const ItemList = (props) => {
 
 }
 
-export default ItemList
+const mapStateToProps = state => {
+    return {
+        items: state.items,
+        loading: state.loading
+    }
+}
+
+export default connect(mapStateToProps, {fetchItems})(ItemList)
+
+// export default ItemList

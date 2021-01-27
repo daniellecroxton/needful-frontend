@@ -8,10 +8,12 @@ const UserItemList = (props) => {
 
     return (
         <div>
-            UserItem List
-            {user.items && user.items.map(item =>
-                <li key={item.id}>{item.name} - {item.price} </li>
+            {user.name} has {user.items.length} items.
+            <ul>
+                {user.items && user.items.map(item =>
+                    <li key={item.id}>{item.name} - {item.price} </li>
                 )}
+            </ul>
         </div>
     )
 }
