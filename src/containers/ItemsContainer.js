@@ -26,13 +26,10 @@ class ItemsContainer extends React.Component {
                 <Switch>
                     {/* <ItemInput user={this.props.user}/>
                     <Route path='/users/new' component={UserInput}/> */}
-
                     <Route path='/users/:id/items/new' render={(routerProps) => <ItemInput {...routerProps} user={this.props.user && this.props.user}/>}/>
-
-
-                    <UserItemList items={this.props.user && this.props.user.items}/>
-                    <ItemList items={this.props.items && this.props.items}/>
-                    <Route path='/items/:id' render={(routerProps) => <ItemShow {...routerProps} items={this.props.items && this.props.items}/>}/>
+                    <Route path='/users/:id/items/' render={(routerProps) => <UserItemList {...routerProps} user={this.props.user && this.props.user}/>}/>
+                    <Route path='/items/:id' render={(routerProps) => <ItemList {...routerProps} items={this.props.items && this.props.items}/>}/>
+                    <Route path='/items/' component={ItemShow} items={this.props.items && this.props.items}/>
                 </Switch>
             </div>
         )

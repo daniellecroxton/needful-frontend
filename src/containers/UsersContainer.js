@@ -11,11 +11,12 @@ class UsersContainer extends React.Component {
         return (
             <div>
                 Users:
+                <UserList users={this.props.users && this.props.users}/>
+
                 <Switch>
-                    <UserList users={this.props.users && this.props.users}/>
                     <Route path='/users/new' component={UserInput}/>
                     <Route path='/users/:id' render={(routerProps) => <UserShow {...routerProps} users={this.props.users && this.props.users}/>}/>
-                    <Route path='/users' render={(routerProps) => <UserList {...routerProps} users={this.props.users && this.props.users}/>}/>
+                    {/* <Route path='/users' render={(routerProps) => <UserList {...routerProps} users={this.props.users && this.props.users}/>}/> */}
                 </Switch>
             </div>
         )

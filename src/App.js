@@ -17,7 +17,7 @@ class App extends React.Component {
           <h1>Needful.</h1>
           <SideNav/>
           <UsersContainer users={this.props.users}/><br/>
-          <ItemsContainer />
+          <ItemsContainer users={this.props.users}/>
       </div>
     );
   }

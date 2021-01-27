@@ -1,21 +1,19 @@
 import React from 'react'
-import {connect} from 'react-redux'
-import {updateItem} from '../actions/updateItem'
 
 const UserItemList = (props) => {
 
-    const handleUpdate = (item) => {
-        props.updateItem(item)
-    }
+
+    let user = props.users.users.filter(user => user.id === props.match.params.id)[0]
+
 
     return (
         <div>
             UserItem List
-            {props.items && props.items.map(item =>
-                <li key={item.id}>{item.name} - {item.price} <button onClick={() => handleUpdate(item)}>Update</button></li>
+            {user.items && user.items.map(item =>
+                <li key={item.id}>{item.name} - {item.price} </li>
                 )}
         </div>
     )
 }
 
-export default connect(null, {updateItem})(UserItemList)
+export default UserItemList

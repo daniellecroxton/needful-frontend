@@ -23,10 +23,11 @@ class UserInput extends React.Component {
 
         return (
             <div>
+                <h3>Create a new user</h3>
                 <form onSubmit={this.handleSubmit}>
                     <label>Username:</label>
                     <input type='text' placeholder='Username' value={this.state.name} name="name" onChange={this.handleChange}></input><br/>
-                    <input type='submit'></input>
+                    <input type='submit' value='Submit'></input>
                 </form>
             </div>
         )
