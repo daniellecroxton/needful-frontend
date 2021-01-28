@@ -1,7 +1,10 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import { createItem } from '../actions/createItem'
+
 class ItemInput extends React.Component {
+
+
 
 state = {
     name: '',
@@ -35,13 +38,13 @@ handleSubmit = (event) => {
                 </h2> */}
                 <h4>Add a new item</h4>
                 <form onSubmit={this.handleSubmit}>
-                    <label>Item Name:</label>
+                    <label>Item Name: </label>
                     <input type='text' name="name" value={this.state.name} onChange={this.handleChange}></input><br/>
-                    <label>Item Description:</label>
+                    <label>Item Description: </label>
                     <input type='text' name="description" value={this.state.description} onChange={this.handleChange}></input><br/>
                     <label>Item Price: $</label>
                     <input type='text' name="price" value={this.state.price} onChange={this.handleChange}></input><br/>
-                    <input type='submit'></input>
+                    <input type='submit' value='Submit'></input>
                 </form>
             </div>
         )

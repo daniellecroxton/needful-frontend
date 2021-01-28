@@ -26,6 +26,7 @@ const ItemList = (props) => {
     return (
     
             <div>
+                All items:
                 {props.items.items.map(item => 
                     <li key={item.id}>
                         <Link to={`/users/${item.user_id}/items/${item.id}`}>{item.name} - {item.price}</Link>

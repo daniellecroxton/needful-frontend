@@ -22,7 +22,7 @@ const UserShow = (props) => {
 
             
             <Link to={`/users/${user.id}/items/new`}>Add item to {user.name}</Link><br/><br/>
-            <Link to={`/users/${user.id}/items`}>See all of {user.name}'s items</Link>
+            <Link to={`/users/${user.id}/items`}>See all of {user.name}'s items</Link><br/><br/>
 
             <UserItemsContainer user={user}/>
         </div>

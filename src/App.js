@@ -5,6 +5,7 @@ import UsersContainer from './containers/UsersContainer'
 import ItemsContainer from './containers/ItemsContainer'
 import UserItemsContainer from './containers/UserItemsContainer'
 import SideNav from './components/SideNav'
+import UserList from './components/UserList'
 import './css/App.css'
 class App extends React.Component {
 
@@ -16,17 +17,19 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <div class="sidenavtop">
+        {/* <div className="sidenavtop"> */}
             <h1>Needful.</h1>
             <SideNav/>
-            </div>
+            Users:
+                <UserList users={this.props.users && this.props.users}/>
+            {/* </div> */}
             {this.props.loading ? <h2>LOADING...</h2> : null}
             <UsersContainer users={this.props.users}/><br/>
             {/* <ItemsContainer users={this.props.users}/> */}
-          <div class="main">
+          {/* <div className="main"> */}
           <ItemsContainer/>
-          <UserItemsContainer/>
-          </div>
+          {/* <UserItemsContainer /> */}
+          {/* </div> */}
       </div>
     );
   }

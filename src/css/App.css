@@ -1,4 +1,15 @@
 
+  body {
+    background-color: #7da2a9;
+    color:oldlace;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 5rem;
+  }
+
+  a {
+    color:oldlace;
+  }
+
   .sidenavtop {
     height: 100%; /* Full-height: remove this if you want "auto" height */
     width: 160px; /* Set the width of the sidebar */
