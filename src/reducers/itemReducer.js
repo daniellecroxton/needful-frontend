@@ -7,6 +7,8 @@ export default function itemReducer(state = {items: []}, action) {
         //       items: [...state.items],
         //       requesting: true
         //     }
+        case 'ADD_ITEM':
+            return {...state, items: [...state.items, action.payload]}
         case 'FETCH_ITEMS':
             return {
                 items: action.payload, 

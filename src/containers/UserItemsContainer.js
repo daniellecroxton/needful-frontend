@@ -14,7 +14,7 @@ class UserItemsContainer extends React.Component {
                 {console.log(this.props.user)}
 
                 <Switch>
-                    <Route path='/users/:id/items/new' render={(routerProps) => <ItemInput {...routerProps} user={this.props.user}/>}/>
+                    <Route path='/users/:id/items/new' render={(routerProps) => <ItemInput {...routerProps} user={this.props.user && this.props.user}/>}/>
                     <Route exact path='/users/:id/items/' render={() => <UserItemList user={this.props.user && this.props.user}/>}/>
                     <Route path='/users/:id/items/:id' render={(routerProps) => <ItemShow {...routerProps} user={this.props.user && this.props.user}/>}/>
                 </Switch>

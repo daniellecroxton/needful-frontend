@@ -10,7 +10,11 @@ export const createItem = (item, userId) => {
             body: JSON.stringify(item)
         })
         .then(res => res.json())
-        .then(item => dispatch({type: 'ADD_ITEM', payload: item}))
+        .then(item => {
+            if (item.error) {
+                alert(item.error)
+            } else {
+            dispatch({type: 'ADD_ITEM', payload: item})
+            }})
     }
 }
-
