@@ -29,7 +29,7 @@ const ItemList = (props) => {
                 All items:
                 {props.items.items.map(item => 
                     <li key={item.id}>
-                        <Link to={`/users/${item.user_id}/items/${item.id}`}>{item.name} - {item.price}</Link>
+                        <Link to={`/users/${item.user_id}/items/${item.id}`}>{item.name} - ${item.price}</Link>
                     </li>)}
             </div>
     )
