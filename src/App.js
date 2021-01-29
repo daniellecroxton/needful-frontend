@@ -16,14 +16,14 @@ class App extends React.Component {
 
     return (
 
-      <div className="App">
+      <div id="outer-container" className="App">
+        <div id="sidebar">
           <h1>Needful.</h1>
-        <div>
           <SideNav/>
           Users:
             <UserList users={this.props.users && this.props.users}/>
         </div>
-        <div>
+        <div id="content">
           <UsersContainer users={this.props.users}/><br/>
           <ItemsContainer/>
         </div>
