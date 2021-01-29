@@ -8,21 +8,20 @@ const UserShow = (props) => {
     
     let user = props.users.users.filter(user => user.id == props.match.params.id)[0]
 
-    // console.log(props.users.users[0].id)
-    // console.log(props.match.params.id)
-    // console.log(user)
-
     return (
         <div>
-            <h2>
-                {user ? user.name : null}
-            </h2>
-
+            {user ?
+                <div>
+                    <h2>
+                        {user.name}
+                    </h2>
             
-            <Link to={`/users/${user.id}/items/new`}>Add item to {user.name}</Link><br/><br/>
-            <Link to={`/users/${user.id}/items`}>See all of {user.name}'s items</Link><br/><br/>
+                    <Link to={`/users/${user.id}/items/new`}>Add item to {user.name}</Link><br/><br/>
+                    <Link to={`/users/${user.id}/items`}>See all of {user.name}'s items</Link><br/><br/>
 
-            <UserItemsContainer user={user}/>
+                    <UserItemsContainer user={user}/>
+                </div>
+            :  <h2>LOADING...</h2>  }
         </div>
     )
 }
