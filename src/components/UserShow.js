@@ -1,8 +1,6 @@
 import React from 'react'
-// import {Redirect} from 'react-router-dom'
 import UserItemsContainer from '../containers/UserItemsContainer'
 import {Link} from 'react-router-dom'
-// import UsersContainer from '../containers/UsersContainer'
 
 const UserShow = (props) => {
     

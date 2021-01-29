@@ -1,9 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-// import {Redirect} from 'react-router-dom'
-// import ItemsContainer from '../containers/ItemsContainer'
-
 const ItemShow = (props) => {
     
     console.log(props)
@@ -19,7 +16,6 @@ const ItemShow = (props) => {
             </h2>
             <h4>${item.price}</h4>
             <p>{item.description}</p><br/>
-            {/* <ItemsContainer item={item}/> */}
             <Link to={`/users/${props.user.id}/items`}>Back to {props.user.name}'s items</Link><br/><br/>
         </div>
     )

@@ -2,15 +2,10 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {fetchItems} from '../actions/fetchItems'
-import {useState, useEffect} from 'react'
-import { useSelector, useDispatch } from "react-redux";
+import {useEffect} from 'react'
+import { useDispatch } from "react-redux";
 
 const ItemList = (props) => {
-
-    // const items = useState([]);
-
-
-    // useEffect(() =>{fetchItems()}, [])
 
     const dispatch = useDispatch();
     useEffect(() => {
@@ -33,8 +28,6 @@ const ItemList = (props) => {
                     </li>)}
             </div>
     )
-
-
 }
 
 const mapStateToProps = state => {
@@ -45,5 +38,3 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps, {fetchItems})(ItemList)
-
-// export default ItemList

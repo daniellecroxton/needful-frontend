@@ -12,8 +12,6 @@ const UserList = (props) => {
                     </li>)}
             </div>
     )
-
-
 }
 
 export default UserList
