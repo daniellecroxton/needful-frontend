@@ -20,7 +20,7 @@ class App extends React.Component {
         <div id="sidebar">
           <h1>Needful.</h1>
           <SideNav/>
-          Users:
+          <h3>Users</h3>
             <UserList users={this.props.users && this.props.users}/>
         </div>
         <div id="content">
