@@ -4,8 +4,6 @@ import { createItem } from '../actions/createItem'
 
 class ItemInput extends React.Component {
 
-
-
 state = {
     name: '',
     description: '',
