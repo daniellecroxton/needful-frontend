@@ -1,6 +1,5 @@
 import React from 'react'
-import UserShow from './UserShow'
-import {Route, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 const UserList = (props) => {
 

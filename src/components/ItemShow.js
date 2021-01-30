@@ -3,11 +3,7 @@ import {Link} from 'react-router-dom'
 
 const ItemShow = (props) => {
     
-    console.log(props)
-
     let item = props.user.items.filter(item => item.id == props.match.params.id)[0]
-
-    console.log(props.match.params.id)
 
     return (
         <div>

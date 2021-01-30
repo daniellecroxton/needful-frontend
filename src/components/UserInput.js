@@ -16,6 +16,7 @@ class UserInput extends React.Component {
         event.preventDefault()
         this.props.createUser(this.state)
         this.setState({ name: '' })
+        
     }
 
 

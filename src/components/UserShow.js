@@ -3,9 +3,7 @@ import UserItemsContainer from '../containers/UserItemsContainer'
 import {Link} from 'react-router-dom'
 
 const UserShow = (props) => {
-    
-    console.log(props)
-    
+        
     let user = props.users.users.filter(user => user.id == props.match.params.id)[0]
 
     return (

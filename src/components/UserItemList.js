@@ -4,8 +4,6 @@ import {Link} from 'react-router-dom'
 
 const UserItemList = (props) => {
 
-    console.log(props)
-
     let user = props.user
 
     return (

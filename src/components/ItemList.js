@@ -13,10 +13,7 @@ const ItemList = (props) => {
         await dispatch(fetchItems());
       };
       loadItems();
-    }, [dispatch]);
-
-    console.log(props)
-    
+    }, [dispatch]);    
 
     return (
     
