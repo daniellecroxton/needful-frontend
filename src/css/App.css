@@ -29,8 +29,35 @@
     padding-top: 8%;
   }
   
-  
   html {
     height: 100%;
   }
-  
+
+  input[type=submit] {
+    background: transparent;
+    color: oldlace;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 2px;
+    border-radius: 8px;
+    border: 1px solid;
+    cursor: pointer;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  input {
+    background: transparent;
+    border: none;
+    color:oldlace;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-bottom: 1px solid oldlace;
+    font-size: 16px;
+    padding: 5px;
+}
+
+input:focus{
+  outline: none;
+}
