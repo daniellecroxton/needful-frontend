@@ -7,13 +7,21 @@ import { useDispatch } from "react-redux";
 
 const ItemList = (props) => {
 
+    // const dispatch = useDispatch();
+    // useEffect(() => {
+    //   const loadItems = async () => {
+    //     await dispatch(fetchItems());
+    //   };
+    //   loadItems();
+    // }, [dispatch]);   
+    
     const dispatch = useDispatch();
     useEffect(() => {
-      const loadItems = async () => {
-        await dispatch(fetchItems());
+      const loadItems = () => {
+        dispatch(fetchItems());
       };
       loadItems();
-    }, [dispatch]);    
+    }, [dispatch]);   
 
     return (
     
